@@ -22,4 +22,9 @@ public class QestionService {
     public List<Qestion> getQestionByCategory(String cat) {
      return qestionRepostories.findByCategory(cat);
     }
+
+    public Qestion addQestion(Qestion qestion) {
+
+        return qestionRepostories.save(qestion);
+    }
 }

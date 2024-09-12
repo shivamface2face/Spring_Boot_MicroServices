@@ -20,6 +20,7 @@ public class Qestion {
     private String option2;
     private String option3;
     private String option4;
+    private String category;
     private String rightAnswer;
     private String diffucltyLavel;
 

@@ -3,10 +3,7 @@ package com.cvm.quizApp.Controller;
 import com.cvm.quizApp.Entity.Qestion;
 import com.cvm.quizApp.Service.QestionService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,6 +23,13 @@ public class QestionController {
     @GetMapping("/cat/{cat}")
     public List<Qestion>getQestionByCategory(@PathVariable(value = "cat") String cat){
 return qestionService.getQestionByCategory(cat);
+    }
+
+    @PostMapping
+    public Qestion addQestion(@RequestBody Qestion qestion){
+
+        return qestionService.addQestion(qestion);
+
     }
 
 }
